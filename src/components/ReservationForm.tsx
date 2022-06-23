@@ -63,8 +63,8 @@ const ReservationForm = () => {
             type="text"
             placeholder="Input your name"
             value={reservation.name}
-            onChange={(e: any) => {
-              handleInput("name", e.target.value);
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              handleInput("name", parseInt(e.currentTarget.value));
             }}
             required
           />
@@ -75,8 +75,8 @@ const ReservationForm = () => {
             type="tel"
             placeholder="Input your cellphone"
             value={reservation.phone}
-            onChange={(e: any) => {
-              handleInput("phone", e.target.value);
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              handleInput("phone", parseInt(e.currentTarget.value));
             }}
             required
           />
@@ -86,8 +86,8 @@ const ReservationForm = () => {
           <Form.Control
             as="select"
             value={reservation.numberOfPeople}
-            onChange={(e: any) => {
-              handleInput("numberOfPeople", e.target.value);
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              handleInput("numberOfPeople", parseInt(e.currentTarget.value));
             }}
             required
           >
@@ -114,8 +114,8 @@ const ReservationForm = () => {
           <Form.Control
             type="datetime-local"
             value={reservation.dateTime}
-            onChange={(e: any) => {
-              handleInput("dateTime", e.target.value);
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              handleInput("dateTime", parseInt(e.currentTarget.value));
             }}
             required
           />
@@ -126,8 +126,8 @@ const ReservationForm = () => {
             as="textarea"
             rows={5}
             value={reservation.specialRequests}
-            onChange={(e: any) => {
-              handleInput("specialRequests", e.target.value);
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              handleInput("specialRequests", parseInt(e.currentTarget.value));
             }}
           />
         </Form.Group>
